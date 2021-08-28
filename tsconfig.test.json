@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {
+		"target": "es2019",
+		"module": "commonjs",
+		"allowJs": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"noImplicitAny": true,
+		"removeComments": true,
+		"preserveConstEnums": true,
+		"forceConsistentCasingInFileNames": true,
+		"noImplicitThis": true,
+		"strictNullChecks": true,
+		"sourceMap": true,
+		"outDir": "dist",
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"lib": ["ES2019", "WebWorker"],
+		"types": ["node", "jest"],
+	},
+	"include": ["*.ts", "**./*.ts"],
+	"exclude": ["*.spec.ts", "**/*.spec.ts", "node_modules", "dist/"],
+	"typeAcquisition": {
+		"enable": true
+	}
+}
