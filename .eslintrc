@@ -6,8 +6,7 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettierx/default",
-    "plugin:prettierx/@typescript-eslint"
+    "plugin:prettierx/default"
   ],
   "rules": {
     "prettierx/options": [
@@ -37,11 +36,10 @@
         "groups": [
           [
             "@stencil/core",
-            "@^",
             "^\\u0000",
             "^@?\\w",
             "^",
-            "^\\"
+            "^\\."
           ]
         ]
       }

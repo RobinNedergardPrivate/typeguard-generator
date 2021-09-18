@@ -5,11 +5,12 @@
   "main": "./out/extension",
   "scripts": {
     "test": "jest",
+    "test.watch": "jest",
     "vscode:prepublish": "npm run compile",
     "build": "tsc",
     "compile": "tsc -p ./",
     "lint": "eslint '*/**/*.{js,ts,tsx}'",
-    "fix": "eslint '*/**/*.{js,ts,tsx} --fix'",
+    "fix": "eslint '*/**/*.{js,ts,tsx}' --fix",
     "pretest": "npm run build",
     "watch": "tsc -watch -p ./"
   },
@@ -36,6 +37,29 @@
   },
   "author": "Robin Nedergård",
   "license": "MIT",
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsconfig": "tsconfig.test.json"
+      }
+    },
+    "transform": {
+      "^.+\\.(j|t)sx?$": "ts-jest"
+    },
+    "testEnvironment": "node",
+    "testRegex": "((\\.|/)(test|spec))(\\.|\\/.+)(jsx?|tsx?)$",
+    "testPathIgnorePatterns": [
+      "node_modules/",
+      "dist/"
+    ],
+    "collectCoverageFrom": [
+      "**/*.{ts,tsx,js,jsx}",
+      "!**/node_modules/**",
+      "!**/dist/**"
+    ],
+    "preset": "ts-jest",
+    "testMatch": null
+  },
   "devDependencies": {
     "@types/jest": "27.0.1",
     "@types/node": "^12.12.0",
